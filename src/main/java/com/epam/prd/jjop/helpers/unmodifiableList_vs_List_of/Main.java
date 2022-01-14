@@ -17,7 +17,16 @@ public class Main {
     private static List<Integer> list, list_second;
 
     public static void main(String[] args) {
+
         /**
+         * SUMMARY of the difference between .unmodifiableList() vs List.of():
+         * while we cannot perform any operations on both types of those lists,
+         * contents of List.of() never change, while the values of .unmodifiableList() can change
+         */
+
+        /**
+         * DETAILS:
+         *
          * Step 1: we create a simple array and print the contents into the console:
          */
         list = Arrays.asList(1, 2);
@@ -28,8 +37,10 @@ public class Main {
          * syntax: Collections.unmodifiableList(original_list);
          *
          * Step 2: we run a static method that uses Collections.unmodifiableList method (at the very bottom of this class).
-         * We can use that method to pass a list, if we don't want to expose the original list to other classes.
-         * That way we do not operate on the original list, but on a copy (original list is encapsulated).
+         * We can use that method if we:
+         * - want to have a list that no one can perform any operations upon;
+         * - don't want to expose the original list to any other classes - that way we do not use the original list,
+         * but a copy (original list is encapsulated).
          * This should display the exact same array to the console.
          */
         System.out.println("list (unmodifiableList) = " + getList(list));
@@ -53,7 +64,6 @@ public class Main {
          * So basically, if we want some class NOT to have power to change a list, but still have access to its contents,
          * we can use Collections.unmodifiableList() to just read the values of it. Operating on a copy of a list
          * does prevent from making any harm to the original list.
-         *
          */
 //        System.out.println("list (unmodifiableList) = " + showUnmodifiedList(list));
 
@@ -71,7 +81,7 @@ public class Main {
          *
          * List.of() creates a list that cannot change.
          * Neither can you change anything inside after it's been created, nor add/remove any elements.
-         * Trying to do so will cause UnsupportedOperationException (uncomment to see)
+         * Trying to do so will cause UnsupportedOperationException (uncomment to run & see)
          */
         list_second = List.of(78, 211);
 //        list_second.set(0, 31);
@@ -80,10 +90,6 @@ public class Main {
 //        list_second.remove(1);
         System.out.println("list_second = " + list_second);
 
-        /**
-         * CONCLUSION of the difference between .unmodifiableList() vs List.of():
-         * contents of List.of() never changes, while the values of .unmodifiableList() can change
-         */
     }
 
     /**
