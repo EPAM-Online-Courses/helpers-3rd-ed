@@ -20,7 +20,7 @@ public class Main {
 
         /**
          * SUMMARY of the difference between .unmodifiableList() vs List.of():
-         * while we cannot perform any operations on both types of those lists,
+         * while we cannot perform any operations on those 'types' of lists,
          * contents of List.of() never change, while the values of .unmodifiableList() can change
          */
 
