@@ -7,6 +7,14 @@
     <groupId>com.epam.prd.jjop</groupId>
     <artifactId>helpers-3rd-ed</artifactId>
     <version>0.1</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <name>Helpers</name>
 
     <properties>
