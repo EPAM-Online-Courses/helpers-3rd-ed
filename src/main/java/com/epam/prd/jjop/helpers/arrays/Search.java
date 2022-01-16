@@ -14,7 +14,7 @@ import java.util.Arrays;
  * @see java.util.Arrays
  */
 class Search {
-    public static void main(String[] args) {        /**
+    public static void main(String[] args) {
      /**
      * Let's prepare some arrays to search through:
      */
@@ -95,7 +95,7 @@ class Search {
 
 /**
  * This class must implement Comparable for two reasons:
- * <ol><li> Array needs to be sorted before searching</li>
+ * <ol><li> Array must be sorted before searching</li>
  * <li>binarySearch(Object[] a, Object key) uses compareTo() under the hood.</li></ol>
  */
 record Item(String name) implements Comparable<Item> {

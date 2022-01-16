@@ -27,9 +27,9 @@ class Sort {
         int[] simpleArrayToSort = {7, 6, 9, 3, 5, 2, 1, 10, 8, 4};
 
         /**
-         * <p>Arrays class provide several overloaded method for sorting an Array.</p>
+         * <p>Arrays class provides several overloaded methods for sorting an Array.</p>
          * <p><b>Default sort order is ascending.</p></b>
-         * <p>We may sort only specific range of an array using {@link java.util.Arrays#sort(int[], int, int)}
+         * <p>If we want, we can only sort a specific range of the array with {@link java.util.Arrays#sort(int[], int, int)}
          * As usual the first index is inclusive and the second one is exclusive.</p>
          */
         System.out.println("simpleArrayToSort before sorting: " + Arrays.toString(simpleArrayToSort));
@@ -37,7 +37,7 @@ class Sort {
         System.out.println("simpleArrayToSort after sorting in range [2, 6): " + Arrays.toString(simpleArrayToSort));
 
         /**
-         * We may simply skip the range parameters and sort the entire array with {@link Arrays#sort(int[])}
+         * We can simply skip the range parameters and sort the entire array with {@link Arrays#sort(int[])}
          */
         Arrays.sort(simpleArrayToSort);
         System.out.println("simpleArrayToSort after sorting: " + Arrays.toString(simpleArrayToSort));
@@ -45,14 +45,14 @@ class Sort {
         /**
          * Arrays of Object are sorted according to the natural ordering of its elements. Natural ordering use
          * {@link Comparable#compareTo(Object)}
-         * So to be able to sort an array of objects using this method, class that wrap these objects needs to implement
+         * So to be able to sort an array of objects using this method, a class that wraps these objects must implement
          * Comparable.
          */
 
         //Arrays.sort(dogs); //this will throw an Exception, because Dog do not implement Comparable.
 
         /**
-         * According to Cat implementation natural ordering compare Cat's age. After sorting Cats should be ordered
+         * According to Cat implementation, natural ordering compare Cat's age. After sorting Cats should be ordered
          * from youngest to oldest.
          */
         System.out.println("cats before sorting: " + Arrays.toString(cats));
