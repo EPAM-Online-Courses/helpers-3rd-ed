@@ -12,7 +12,7 @@ class SomeOtherClass {
 
         final Basket basket = new Basket();
         /**
-         * retrieving the list from a different class:
+         * Retrieving the list from a different class:
          */
         List<String> customerProductsInBasket = basket.getShoppingList();  // <- this uses .unmodifiableList()
         System.out.println(customerProductsInBasket);
