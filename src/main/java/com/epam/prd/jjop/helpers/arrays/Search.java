@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * <p>Examples of searching for elements in an array.</p>
  * <p>Arrays class provides overloaded binarySearch() methods based on
- * {@link <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Binary search algorithm</a>}
+ * <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Binary search algorithm</a>
  * Before calling binarySearch() an array must be sorted, otherwise the results are undefined.
  * Another important thing is that if an array contains multiple elements with the specified value,
  * there is no guarantee which one will be found.</p>
@@ -15,9 +15,9 @@ import java.util.Arrays;
  */
 class Search {
     public static void main(String[] args) {
-     /**
-     * Let's prepare some arrays to search through:
-     */
+        /**
+         * Let's prepare some arrays to search through:
+         */
         int[] simpleArrayToSearch = {1, 6, 4, 3, 9, 2, 7, 10, 5, 8};
 
         Item[] womanPurse = {new Item("keys"),
@@ -46,7 +46,6 @@ class Search {
                 new Item("headphones"),
                 new Item("elephant"),
                 new Item("coins")};
-
 
         /**
          * <p>Quoting javadoc, binarySearch() returns:</p>
@@ -94,7 +93,7 @@ class Search {
 }
 
 /**
- * This class must implement Comparable for two reasons:
+ * This class must implement {@link java.lang.Comparable} for two reasons:
  * <ol><li> Array must be sorted before searching</li>
  * <li>binarySearch(Object[] a, Object key) uses compareTo() under the hood.</li></ol>
  */

@@ -48,7 +48,6 @@ class Sort {
          * So to be able to sort an array of objects using this method, a class that wraps these objects must implement
          * Comparable.
          */
-
         //Arrays.sort(dogs); //this will throw an Exception, because Dog do not implement Comparable.
 
         /**

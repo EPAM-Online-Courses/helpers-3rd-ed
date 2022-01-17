@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @author Anna Silenko
  * @see java.util.Arrays
  */
-public class Print {
+class Print {
 
     public static void main(String[] args) {
 
@@ -27,19 +27,17 @@ public class Print {
                 {{2}, {2}, {2}}};
 
         /**
-         * <p>If we try to call System.out.println() method on an array, {@link Object#toString()} method will be called,
+         * <p>If we try to call {@code System.out.println()} method on an array, {@link Object#toString()} method will be called,
          * which returns:</p>
          * <code>getClass().getName() + "@" + Integer.toHexString(hashCode())</code>
-         * <p>So for a Strings array outputs will be something like:
+         * <p>So for a strings array outputs will be something like:
          * <i>[Ljava.lang.String;@7cca494b</i> which is not very useful.</p>
          */
         System.out.println("System.out.println(array1D) = " + array1D);
 
         /**
          * Since Java 1.5 we can return string value of content of an array toString() or deepToString() from Arrays class.
-         *
          * {@link Arrays#toString(Object[] a)} only works for 1D arrays.
-         *
          */
         System.out.println("Arrays.toString(array1D) = " + Arrays.toString(array1D));
 
