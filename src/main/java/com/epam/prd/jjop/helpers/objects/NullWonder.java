@@ -65,7 +65,7 @@ public class NullWonder {
          * <p>Method created for validation of provided parameter if it's not null.</p>
          * <p>In case of null will throw {@link java.lang.NullPointerException}.</p>
          */
-         Objects.requireNonNull(assumeNull);
+        Objects.requireNonNull(assumeNull);
 
         /*
          * Returns the result of calling toString for a non-null argument and "null" for a null argument.
