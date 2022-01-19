@@ -5,14 +5,14 @@ import java.util.Comparator;
 import java.util.Objects;
 
 /**
- * Description of @see java.util.Objects regarding null problem solving
+ * Description of {@link java.util.Objects} regarding null problem solving.
  * <p>
- * This class show examples of all methods to check for null.
+ * This class show examples of all methods to check for {@code null}.
  * Description of the differences between these methods can be found here.
  * </p>
  *
  * @author Krzysztof Dolański
- * Objects class form java.util @since 1.7
+ * Objects class from java.util @since 1.7
  */
 
 public class NullWonder {
@@ -23,15 +23,15 @@ public class NullWonder {
         String assumeNull = null;
 
         /**
-         * <p>
+         *
          * Using null object as parameter in this method will produce 0 as return.
-         * </p>
+         *
          * <p>
          * This method under the hood is using Arrays.hashCode
          * </p>
          * <p>
          * WARNING - in case of passing more than one null parameter return value WILL NOT be 0 because of implementation of Arrays.hashCode()
-         * @see java.util.Arrays.hashCode();
+         * {@link java.util.Arrays.hashCode()};
          * </p>
          * Object.hash(null) <p>returned value is 0</p>
          * Object.hash(null, null) <p>returned value is 961</p>
@@ -40,7 +40,7 @@ public class NullWonder {
         Objects.hash();
 
         /*
-         *Will return 0 if given parameter will be null
+         * Will return 0 if given parameter will be null
          */
         Objects.hashCode(assumeNull);
 
