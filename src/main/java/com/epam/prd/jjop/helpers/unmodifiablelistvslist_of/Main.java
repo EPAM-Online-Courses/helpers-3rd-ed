@@ -1,4 +1,4 @@
-package com.epam.prd.jjop.helpers.unmodifiablelist_vs_list_of;
+package com.epam.prd.jjop.helpers.unmodifiablelistvslist_of;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,14 +17,14 @@ import java.util.List;
 public class Main {
 
     private static List<Integer> list;
-    private static List<Integer> list_second;
+    private static List<Integer> secondList;
 
     public static void main(String[] args) {
 
         /**
-         * SUMMARY of the difference between .unmodifiableList() vs List.of():
-         * while we cannot perform any operations on those 'types' of lists,
-         * contents of List.of() never change, while the values of .unmodifiableList() can change
+         * SUMMARY of the difference between {@link java.util.Collections#unmodifiableList(List)} vs {@link List#of()}:
+         * While we cannot perform any operations on those 'types' of lists,
+         * contents of {@link List#of()} never change, while the values of {@link java.util.Collections#unmodifiableList(List)}  can change.
          *
          *
          * DETAILS:
@@ -36,9 +36,9 @@ public class Main {
 
         /**
          * ===> unmodifiableList <===
-         * syntax: Collections.unmodifiableList(original_list);
+         * syntax: <code>Collections.unmodifiableList(original_list)</code>;
          *
-         * Step 2: we run a static method that uses Collections.unmodifiableList method (at the very bottom of this class).
+         * Step 2: we run a static method that uses {@link java.util.Collections#unmodifiableList(List)} method (at the very bottom of this class).
          * We can use that method if we:
          * <ul>
          *     <li>want to have a list that no one can perform any operations upon;</li>
@@ -63,10 +63,10 @@ public class Main {
          * Bug? Were we deceived?
          * Not at all. We can't make any operations on this copy (like add, change or remove elements),
          * but the original array CAN change.
-         * This means that if the original list changes, those changes will be reflected by the unmodifiableList() method.
+         * This means that if the original list changes, those changes will be reflected by the {@link java.util.Collections#unmodifiableList(List)} method.
          *
          * So basically, if we want some class NOT to have power to change a list, but still have access to its contents,
-         * we can use Collections.unmodifiableList() to just read the values of it. Operating on a copy of a list
+         * we can use {@link java.util.Collections#unmodifiableList(List)} to just read the values of it. Operating on a copy of a list
          * does prevent from making any harm to the original list.
          * TODO: uncomment the code below
          */
@@ -79,24 +79,24 @@ public class Main {
          *     <li>other classes cannot change (and don't have access to) the original list, assuming it's 'private'</li>
          *     <li>can't make any operation on unmodifiableList (e.g. add anything) but the list itself CAN change;
          *     example at:
-         *     @see com.epam.prd.jjop.helpers.unmodifiablelist_vs_list_of.example.SomeOtherClass</li>
+         *     @see com.epam.prd.jjop.helpers.unmodifiablelistvslist_of.example.SomeOtherClass</li>
          * </ul>
          *
          *
          *
          * ===> List.of <===
          *
-         * List.of() creates a list that cannot change.
+         * {@link List#of()} creates a list that cannot change.
          * Neither can you change anything inside after it's been created, nor add/remove any elements.
          * Trying to do so will cause UnsupportedOperationException (uncomment to run & see)
          * TODO: uncomment the code below and run to see that it does not work
          */
-        list_second = List.of(78, 211);
-//        list_second.set(0, 31);
-//        list_second.set(1, 28);
-//        list_second.add(13);
-//        list_second.remove(1);
-        System.out.println("list_second = " + list_second);
+        secondList = List.of(78, 211);
+//        secondList.set(0, 31);
+//        secondList.set(1, 28);
+//        secondList.add(13);
+//        secondList.remove(1);
+        System.out.println("secondList = " + secondList);
 
     }
 

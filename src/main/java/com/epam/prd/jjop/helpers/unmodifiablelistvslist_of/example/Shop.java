@@ -1,4 +1,4 @@
-package com.epam.prd.jjop.helpers.unmodifiablelist_vs_list_of.example;
+package com.epam.prd.jjop.helpers.unmodifiablelistvslist_of.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Please read contents of the Main class first
- * @see com.epam.prd.jjop.helpers.unmodifiablelist_vs_list_of.Main
+ * @see com.epam.prd.jjop.helpers.unmodifiablelistvslist_of.Main
  *
  *
  * In this example we have a simple shopping basket functionality (1 client for simplicity).
