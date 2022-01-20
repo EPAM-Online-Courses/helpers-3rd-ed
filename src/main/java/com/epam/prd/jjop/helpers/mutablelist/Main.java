@@ -8,9 +8,17 @@ import java.util.*;
 class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        //m.arraysAsList();
-        //m.collectionsList();
+        System.out.println("Using Arrays.asList");
+        m.arraysAsList();
+        System.out.printf("%n%n%n");
+        System.out.println("Using Collections.list");
+        m.collectionsList();
+        System.out.printf("%n%n%n");
+        System.out.println("Using List.of");
         m.listOf();
+        System.out.printf("%n%n%n");
+        System.out.println("Checking for null accepting");
+        m.checkNullAdding();
     }
 
     /**
@@ -124,4 +132,42 @@ class Main {
         print(vegetables, list);
     }
 
+    /**
+     * When <code>null</code> appears in the data source it is allowed to process into list using
+     * {@link Arrays#asList(Object[])} and {@link Collections#list(Enumeration)} methods.
+     * The {@link List#of()} method does not allow it to contain <code>null</code>.
+     */
+    private void checkNullAdding() {
+        System.out.println("Using null with Arrays.asList");
+        try {
+            String[] names = {"John", null};
+            List<String> namesList = Arrays.asList(names);
+            System.out.println("SUCCESS");
+            print(names, namesList);
+        } catch (NullPointerException e) {
+            System.out.println("FAILURE");
+        }
+
+        System.out.printf("%nUsing null with Arrays.asList%n");
+        try {
+            Vector<String> fruits = new Vector<>();
+            fruits.add("banana");
+            fruits.add(null);
+            List<String> list = Collections.list(fruits.elements());
+            System.out.println("SUCCESS");
+            print(fruits, list);
+        } catch (NullPointerException e) {
+            System.out.println("FAILURE");
+        }
+
+        System.out.printf("%nUsing null with List.of%n");
+        try {
+            String[] vegetables = {"Cucumber", null};
+            List<String> listV = List.of(vegetables);
+            System.out.println("SUCCESS");
+            print(vegetables, listV);
+        } catch (NullPointerException e) {
+            System.out.println("FAILURE");
+        }
+    }
 }
