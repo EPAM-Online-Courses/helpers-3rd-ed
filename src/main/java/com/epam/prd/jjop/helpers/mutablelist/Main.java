@@ -1,7 +1,6 @@
 package com.epam.prd.jjop.helpers.mutablelist;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Mariusz Bal
@@ -9,7 +8,8 @@ import java.util.List;
 class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        m.arraysAsList();
+        //m.arraysAsList();
+        m.collectionsList();
     }
 
     /**
@@ -20,7 +20,7 @@ class Main {
      * {@link java.util.Collection} methods can be used on such list. The valid ones are
      * these that do not change the list's size. Those leave the list unchanged and throw
      * {@link UnsupportedOperationException}.
-     * <p>
+     *
      * The list is not the copy of the array, but operate on the same data in the memory.
      */
     private void arraysAsList() {
@@ -52,4 +52,34 @@ class Main {
         System.out.println("Names in list: " + namesList);
     }
 
+    /**
+     * The {@link Collections#list(Enumeration)} method returns an {@link ArrayList}.
+     * The list is created as a copy of the initial data source, so changes are not shared across
+     * list and enumeration data.
+     * One can simply modify the data source as needed,
+     * even if the modification results in collection size change.
+     */
+    private void collectionsList() {
+        Vector<String> fruits = new Vector<>();
+        fruits.add("banana");
+        fruits.add("apple");
+        fruits.add("orange");
+        List<String> list = Collections.list(fruits.elements());
+        print(fruits, list);
+
+        System.out.printf("%nChanging an item in the vector%n%n");
+        fruits.set(1, "peach");
+        fruits.add(2,"plum");
+        print(fruits, list);
+
+        System.out.printf("%nChanging an item in the list%n%n");
+        list.set(2, "pineapple");
+        list.add(1, "watermelon");
+        print(fruits, list);
+    }
+
+    private void print(Vector<String> vector, List<String> list) {
+        System.out.println("Fruits in vector: " + String.join(", ", vector));
+        System.out.println("Fruits in list: " + String.join(", ", list));
+    }
 }
