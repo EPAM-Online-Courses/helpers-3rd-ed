@@ -3,9 +3,8 @@ package com.epam.prd.jjop.helpers.com.epam.map;
 import java.util.Map;
 
 /**
+ * immutable Map with custom immutable class
  * @author Kanybek Mukalaev
- *
- *  immutable Map with custom immutable class
  */
 class MapOfWithImutableClass {
     public static void main(String[] args) {
