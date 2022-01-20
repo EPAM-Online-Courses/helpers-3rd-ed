@@ -9,7 +9,8 @@ class Main {
     public static void main(String[] args) {
         Main m = new Main();
         //m.arraysAsList();
-        m.collectionsList();
+        //m.collectionsList();
+        m.listOf();
     }
 
     /**
@@ -20,7 +21,7 @@ class Main {
      * {@link java.util.Collection} methods can be used on such list. The valid ones are
      * these that do not change the list's size. Those leave the list unchanged and throw
      * {@link UnsupportedOperationException}.
-     *
+     * <p>
      * The list is not the copy of the array, but operate on the same data in the memory.
      */
     private void arraysAsList() {
@@ -47,9 +48,9 @@ class Main {
         print(names, namesList);
     }
 
-    private void print(String[] names, List<String> namesList) {
-        System.out.println("Names in array: " + String.join(", ", names));
-        System.out.println("Names in list: " + namesList);
+    private void print(String[] array, List<String> list) {
+        System.out.println("Names in array: " + String.join(", ", array));
+        System.out.println("Names in list: " + list);
     }
 
     /**
@@ -69,7 +70,7 @@ class Main {
 
         System.out.printf("%nChanging an item in the vector%n%n");
         fruits.set(1, "peach");
-        fruits.add(2,"plum");
+        fruits.add(2, "plum");
         print(fruits, list);
 
         System.out.printf("%nChanging an item in the list%n%n");
@@ -82,4 +83,45 @@ class Main {
         System.out.println("Fruits in vector: " + String.join(", ", vector));
         System.out.println("Fruits in list: " + String.join(", ", list));
     }
+
+    /**
+     * The {@link List#of()} method allows us to create a list of elements passed as arguments.
+     * The returned object is an unmodifiable list. We cannot modify its size by adding or removing items.
+     * We cannot replace an item as well. Change in the original data source does not reflect in
+     * a change in the list.
+     * <br />
+     * If we would like to have it as a mutable list we may wrap it using
+     * <code>new ArrayList<>(List.of(x,y,z))</code>. This will create a new, modifiable ArrayList using
+     * unmodifiable List.of() copied elements.
+     *
+     * @see ArrayList
+     */
+    private void listOf() {
+        String[] vegetables = {"Cucumber", "Tomato", "Potato"};
+        List<String> list = List.of(vegetables);
+        print(vegetables, list);
+
+        System.out.printf("%nChanging an item in the array%n%n");
+        vegetables[1] = "Garlic";
+        print(vegetables, list);
+
+        System.out.printf("%nChanging an item in the list%n%n");
+        try {
+            list.set(2, "horse radish");
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Could not replace an item");
+        }
+        try {
+            list.add("carrot");
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Could not add an item");
+        }
+        try {
+            list.remove(0);
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Could not remove an item");
+        }
+        print(vegetables, list);
+    }
+
 }
