@@ -2,7 +2,10 @@ package com.epam.prd.jjop.helpers.arrays;
 
 import java.util.Arrays;
 
-public class Mismatch {
+/**+
+ * @author Izabela Grzelecka
+ */
+public class MismatchAndCompareUnsigned {
 
     public static void main(String[] args) {
 
@@ -15,6 +18,11 @@ public class Mismatch {
 
         System.out.println("Mismatched index of int array is: " + intArrayMismatch);
         System.out.println("Mismatched index of int array with specified range is: " + intArrayMismatch);
+
+        //Examples of compareUnsigned() with int arrays:
+        System.out.println("Arrays.compareUnsigned(array1, array2):  " + Arrays.compareUnsigned(array1, array2));
+        System.out.println("Arrays.compareUnsigned(array1, array2) with specified range is: " +
+                Arrays.compareUnsigned(array1,0, 3, array2, 0,3));
 
         //Example of int mismatch(String[] a, String[] b)
         String[] array3 = {"Kasia", "Ania", "Basia"};
@@ -47,6 +55,11 @@ public class Mismatch {
         System.out.println("Mismatched index of byte array is: " + byteArrayMismatch);
         System.out.println("Mismatched index of byte array with specified range is: " + byteArrayMismatch1);
 
+        //Examples of compareUnsigned() with byte arrays:
+        System.out.println("Arrays.compareUnsigned(array7, array8):  " + Arrays.compareUnsigned(array7, array8));
+        System.out.println("Arrays.compareUnsigned(array7, array8) with specified range is: " +
+
+                Arrays.compareUnsigned(array7,0, 3, array8, 0,3));
         //Example of int mismatch(char[] a, char[] b)
         char[] array9 = {'a', 'b', 'c', 'd', 'e'};
         char[] array10 = {'a', 'b', 'c', 'd', 'e'};
@@ -100,6 +113,10 @@ public class Mismatch {
         System.out.println("Mismatched index in long array is: " + longArrayMismatch);
         System.out.println("Mismatched index of long array with specified range is: " + longArrayMismatch1);
 
+        //Examples of compareUnsigned() with short arrays:
+        System.out.println("Arrays.compareUnsigned(array17, array18):  " + Arrays.compareUnsigned(array17, array18));
+        System.out.println("Arrays.compareUnsigned(array17, array18) with specified range is: " +
+                Arrays.compareUnsigned(array17,0, 3, array18, 0,3));
 
         //Example of int mismatch(short[] a, short[] b)
         short[] array19 = {1, 2, 3, 4, 5};
@@ -110,6 +127,21 @@ public class Mismatch {
 
         System.out.println("Mismatched index in short array is: " + shortArrayMismatch );
         System.out.println("Mismatched index of short array with specified range is: " + shortArrayMismatch1);
+
+        //Examples of compareUnsigned() with short arrays:
+        System.out.println("Arrays.compareUnsigned(array19, array20):  " + Arrays.compareUnsigned(array19, array20));
+        System.out.println("Arrays.compareUnsigned(array19, array20) with specified range is: " +
+                Arrays.compareUnsigned(array19,0, 3, array20, 0,3));
+
+
+
+
+
+
+
+
+
+
     }
 
 }
