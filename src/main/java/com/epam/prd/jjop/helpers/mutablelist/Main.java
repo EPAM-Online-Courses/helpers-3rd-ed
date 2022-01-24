@@ -3,6 +3,8 @@ package com.epam.prd.jjop.helpers.mutablelist;
 import java.util.*;
 
 /**
+ * Shows how to have an IM/MUTABLE list with Arrays.asList, Collections.list and List.of.
+ *
  * @author Mariusz Bal
  */
 class Main {
@@ -45,12 +47,12 @@ class Main {
         try {
             namesList.remove(2);
         } catch (UnsupportedOperationException e) {
-            System.out.println("Could not remove from the list");
+            System.err.println("Could not remove from the list");
         }
         try {
             namesList.add("added item");
         } catch (UnsupportedOperationException e) {
-            System.out.println("Could not add to the list");
+            System.err.println("Could not add to the list");
         }
         namesList.set(3, "replaced item");
         print(names, namesList);
@@ -117,17 +119,17 @@ class Main {
         try {
             list.set(2, "horse radish");
         } catch (UnsupportedOperationException e) {
-            System.out.println("Could not replace an item");
+            System.err.println("Could not replace an item");
         }
         try {
             list.add("carrot");
         } catch (UnsupportedOperationException e) {
-            System.out.println("Could not add an item");
+            System.err.println("Could not add an item");
         }
         try {
             list.remove(0);
         } catch (UnsupportedOperationException e) {
-            System.out.println("Could not remove an item");
+            System.err.println("Could not remove an item");
         }
         print(vegetables, list);
     }
@@ -145,7 +147,7 @@ class Main {
             System.out.println("SUCCESS");
             print(names, namesList);
         } catch (NullPointerException e) {
-            System.out.println("FAILURE");
+            System.err.println("FAILURE");
         }
 
         System.out.printf("%nUsing null with Arrays.asList%n");
@@ -157,7 +159,7 @@ class Main {
             System.out.println("SUCCESS");
             print(fruits, list);
         } catch (NullPointerException e) {
-            System.out.println("FAILURE");
+            System.err.println("FAILURE");
         }
 
         System.out.printf("%nUsing null with List.of%n");
@@ -167,7 +169,7 @@ class Main {
             System.out.println("SUCCESS");
             print(vegetables, listV);
         } catch (NullPointerException e) {
-            System.out.println("FAILURE");
+            System.err.println("FAILURE");
         }
     }
 }
