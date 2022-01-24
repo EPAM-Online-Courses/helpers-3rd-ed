@@ -35,7 +35,6 @@ class Copy {
          * A subsequence of array components are copied from the source array referenced by <b>src/b>
          * to the destination array referenced by <b>dest</b>.
          * The number of components copied is equal to the length argument.
-         *
          * <p>Declaration method:</p>
          * public static void arraycopy(Object source_arr, int sourcePos, Object dest_arr, int destPos, int len)
          * @param source_arr - the source array.
@@ -43,9 +42,6 @@ class Copy {
          * @param dest_arr - array to be copied in.
          * @param destPos - starting position in the destination data, where to copy in.
          * @param len -the number of array elements to be copied.
-         */
-
-        /**
          * Uses method java.lang.System.arraycopy() to copy part of Source array to Destination one.
          */
         //Prints source and destination arrays
@@ -74,7 +70,6 @@ class Copy {
          * @throws NegativeArraySizeException if newLength is negative.
          * @throws NullPointerException if original is null.
          * @throws ArrayStoreException - if an element copied from original is not of a runtime type that can be stored in an array of class newType.
-         *
          * Arrays.copyOf methods for reference type array:
          * <ul>
          *    <li> {@link java.util.Arrays#copyOf(Object[], int)} - Copies the specified array, truncating or padding with null
@@ -84,8 +79,6 @@ class Copy {
          *         characters (if necessary) so the copy has the specified length.
          *    </li>
          *  </ul>
-         */
-        /**
          * Prints copies of different types arrays
          * New array elements will be assigned from an existing value from an old array.
          * If the length of the new array is greater than the old array in such cases all remaining elements
@@ -116,7 +109,7 @@ class Copy {
         /**
          * Lets look at the difference between method java.lang.System.arraycopy() and java.util.Arrays.copyOf
          * Arrays.copyOf() creates a new array object when copying the element. System.arraycopy copies into an existing array.
-         * If we read the source code of Arrays.copyOf() @see <a> her="https://developer.classpath.org/doc/java/util/Arrays-source.html"</a>,
+         * If we read the source code of Arrays.copyOf() {@link <a> her="https://developer.classpath.org/doc/java/util/Arrays-source.html"</a>},
          * we can see that it uses System.arraycopy().
          * <p>java.util.Arrays.copyOf method doesn't allow to choose range for copy as it's possible in java.lang.System.arraycopy().</p>
          */
@@ -133,7 +126,6 @@ class Copy {
          * it copies the specified range of the specified array into a new array. The initial index of the range (from)
          * must lie between zero and original.length, inclusive. As Arrays.copyOf() method
          * it creates a new array object when copying the element and uses System.arraycopy() inside it.
-         *
          * <p>There are 8 overloaded types of java.util.Arrays.copyOf of primitive array
          * e.g. boolean, int, short, char, byte, long, float, and double as well as reference type array (see below).</p>
          * <b>Syntax</b>:
@@ -147,14 +139,11 @@ class Copy {
          *  @throws ArrayStoreException if an element copied from original is not of a runtime type that can be stored in an array of class newType.
          * Arrays.copyOf methods for reference type array:
          * <ul>
-         *    <li> {@link java.util.Arrays#copyOfRange(Object[], int, int)} - Copies the specified range of the specified array into a new array..
+         *    <li> {@link java.util.Arrays#copyOfRange(Object[], int, int)} - Copies the specified range of the specified array into a new array.
          *    </li>
          *    <li> {@link java.util.Arrays#copyOfRange(Object[], int, int, Class)} - Copies the specified range of the specified array into a new array.
          *    </li>
          *  </ul>
-         */
-
-        /**
          * Prints copies of different types arrays with specified range
          * New array elements will be assigned from an existing value from an old array.
          * If the length of the new array is greater than the old array in such cases all remaining elements
