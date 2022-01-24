@@ -19,7 +19,6 @@ class EmptyList {
      * {@link Collections#emptyList()} intrinsically does the casting for us
      * and returns type-safe empty list ((List<T>) EMPTY_LIST)
      */
-
     public static void main(String[] args) {
 
         /**
@@ -39,7 +38,6 @@ class EmptyList {
          */
         List<String> emptyListByMethod = Collections.emptyList();
 
-
         /**
          * Usage example.
          */
@@ -52,10 +50,12 @@ class EmptyList {
     /**
      * Usage example.
      * Obtaining empty list from {@link Collections#EMPTY_LIST} or invoking {@link Collections#emptyList()} is useful
-     * in case of a method that must return list to which we will not add objects, and we want to avoid returning null and performing null judgement.
+     * in case of a method that must return list to which we will not add objects, and we want to avoid returning null
+     * and performing null judgement.
      * As {@link Collections#emptyList()} returns type-safe empty list, it should be preferred.
      * It should be remembered that in both cases the returned list is immutable, so we cannot add any object to it.
-     * It is especially useful when we need to return empty list many times because it always returns the same instance (singleton), thus, we can save on resources.
+     * It is especially useful when we need to return empty list many times because it always returns the same instance
+     * (singleton), thus, we can save on resources.
      */
     static List<Integer> extractNumbersFromText(String text) {
         String regex = ".*\\d.*";
