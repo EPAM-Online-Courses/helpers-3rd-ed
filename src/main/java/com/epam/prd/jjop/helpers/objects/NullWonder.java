@@ -27,7 +27,7 @@ public class NullWonder {
          * This method under the hood is using Arrays.hashCode.
          * </p>
          * <p>
-         * WARNING - in case of passing more than one null parameter return value WILL NOT be 0 because of implementation of Arrays.hashCode() {@link java.util.Arrays#hashCode()}
+         * WARNING - in case of passing more than one null parameter return value WILL NOT be 0 because of implementation of {@link java.util.Arrays#hashCode()}
          * </p>
          * Object.hash(null) <p>Returned value is 0.</p>
          * Object.hash(null, null) <p>Returned value is 961.</p>
