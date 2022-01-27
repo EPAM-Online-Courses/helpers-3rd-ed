@@ -3,7 +3,7 @@ package com.epam.prd.jjop.helpers.com.epam.map;
 import java.util.Map;
 
 /**
- * immutable Map with custom immutable class
+ * Example of immutable Map with custom immutable class.
  * @author Kanybek Mukalaev
  */
 class MapOfWithImutableClass {

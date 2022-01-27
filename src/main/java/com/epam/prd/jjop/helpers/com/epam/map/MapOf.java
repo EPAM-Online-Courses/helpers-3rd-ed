@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * MapOf class was created to see the examples of method Map.of with immutable List.of and mutable list
+ *  Created to show the examples of methods {@link java.util.Map#of()}
+ *  and {@link java.util.List#of()}, along with mutable list.
  * @author Kanybek Mukalaev
  */
 class MapOf {
+    /**
+     * The {@link java.util.Map#of()} returns unmodifiable Map. We need to pass key and value pairs.
+     * The number of key and value pairs that can be passed are from 0 to 10.
+     * Find the method signature of Map.of for some key and value pairs.
+     * */
     public static void main(String[] args) {
-        /**
-         * The {@link java.util.Map#of()} returns unmodifiable Map. We need to pass key and value pairs.
-         * The number of key and value pairs that can be passed are from 0 to 10.
-         * Find the method signature of Map.of for some key and value pairs.
-         * */
-
         Map<Integer, String> mapOf = Map.of(01, "Katowice", 02, "Wroclaw", 03, "Gdansk",
                 04, "Katowice", 05, "Wroclaw", 06, "Gdansk");
         mapOf.forEach((k,v)-> System.out.println(k + " : " + v));

@@ -5,15 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *  UnmodifiableMap class was created to see the examples of an unmodifiable Map and mutable map
- * @author Kanybek Mukalaev
+ *  UnmodifiableMap class was created to see the examples of an unmodifiable Map and mutable map.
+ *  An unmodifiable Map is just a wrapper over a modifiable map. It doesn't allow modifications to it directly.
+ *  @author Kanybek Mukalaev
  */
 class UnmodifiableMap {
     public static void main(String[] args) {
-        /**
-         * An unmodifiable Map is just a wrapper over a modifiable map
-         * and it doesn't allow modifications to it directly
-         */
         Map<String, String> mutableMap = new HashMap<>();
         mutableMap.put("city1", "Katowice");
         mutableMap.put("city2", "Krakow");
