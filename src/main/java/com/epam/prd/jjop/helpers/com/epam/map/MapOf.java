@@ -27,8 +27,8 @@ class MapOf {
         //mapOf.forEach((k,v)-> System.out.println(k + " : " + v));
 
         /**
-         * We will create immutable Map with immutable List.
-         * try to put one more element to immutable list and it will throw list1.add("Rodomsko");
+         * We will create immutable Map with immutable list.
+         * Try to put one more element to immutable list and it will throw list1.add("Rodomsko");
          * Exception in thread "main" java.lang.UnsupportedOperationException
          * */
         List<String> list1 = List.of("England", "Kyrgyzstan");
@@ -38,7 +38,7 @@ class MapOf {
         System.out.println(mapOfList);
 
         /*
-        *  If we don't use immutable List as value, then the unmodifiable Map with mutable List will also not be immutable.
+        *  If we don't use immutable List as value, then the unmodifiable map with mutable list will also not be immutable.
         *   Output:
         *   {Katowice=[1, 2, 3]}
         *   {Katowice=[1, 2, 3, 4]}

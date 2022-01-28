@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *  UnmodifiableMap class was created to see the examples of an unmodifiable Map and mutable map.
- *  An unmodifiable Map is just a wrapper over a modifiable map. It doesn't allow modifications to it directly.
+ *  UnmodifiableMap class was created to see the examples of an unmodifiable map and mutable map.
+ *  An unmodifiable map is just a wrapper over a modifiable map. It doesn't allow modifications to it directly.
  *  @author Kanybek Mukalaev
  */
 class UnmodifiableMap {
